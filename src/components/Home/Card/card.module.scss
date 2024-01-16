@@ -43,6 +43,7 @@
 			height: 80%;
 		}
 		.unliked {
+			background-color: $color_grey;
 			&:hover {
 				border-color: $color_blue;
 			}
