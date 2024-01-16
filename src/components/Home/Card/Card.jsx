@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import PropTypes from "prop-types";
 import styles from "./card.module.scss";
-import likeNotClicked from "../../assets/like-svgrepo-com.svg";
-import likeClicked from "../../assets/like-svgrepo-com-2.svg";
-import Delete from "../../assets/cross-svgrepo-com-2.svg";
-import { removeCat, likeCat, unlikeCat } from "../../stores/catsReducer";
+import likeNotClicked from "../../../assets/images/like-svgrepo-com.svg";
+import likeClicked from "../../../assets/images/like-svgrepo-com-2.svg";
+import Delete from "../../../assets/images/cross-svgrepo-com-2.svg";
+import { removeCat, likeCat, unlikeCat } from "../../../stores/catsSlice";
 
 const Card = ({ id, url, name, wikipedia_url, temperament }) => {
 	const dispatch = useDispatch();
@@ -55,6 +56,14 @@ const Card = ({ id, url, name, wikipedia_url, temperament }) => {
 			</div>
 		</div>
 	);
+};
+
+Card.propTypes = {
+	id: PropTypes.string,
+	url: PropTypes.string,
+	name: PropTypes.string,
+	wikipedia_url: PropTypes.string,
+	temperament: PropTypes.string,
 };
 
 export default Card;

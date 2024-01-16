@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit"; 
-import catsSlice from './catsReducer';
+import catsSlice from './catsSlice';
 
 const store = configureStore({
     reducer: {

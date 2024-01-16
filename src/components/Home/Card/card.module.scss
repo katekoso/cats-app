@@ -1,5 +1,6 @@
+@import "../../../assets/styles/variables.scss";
+
 .cat {
-	//position: relative;
 	box-sizing: border-box;
 	border: 1px solid black;
 	border-radius: 10px;
@@ -7,10 +8,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding: 5%;
+	padding: 0.5rem;
+	max-width: 370px;
+	height: 610px;
+	place-self: center;
 	.imgContainer {
 		width: 80%;
-		height: 70%;
+		height: 68%;
+		display: flex;
+		align-items: center;
 		.cat__img {
 			width: 100%;
 		}
@@ -38,13 +44,13 @@
 		}
 		.unliked {
 			&:hover {
-				border-color: #383b6d;
+				border-color: $color_blue;
 			}
 		}
 		.liked {
-			background-color: #383b6d;
+			background-color: $color_blue;
 			&:hover {
-				border-color: rgb(202, 202, 202);
+				border-color: $color_grey;
 			}
 		}
 		.btn__img {

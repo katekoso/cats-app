@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect } from "react";
-import { fetchCats } from "./stores/catsReducer";
+import { fetchCats } from "./stores/catsSlice";
 import { useDispatch } from "react-redux";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 
 function App() {
 	const dispatch = useDispatch();

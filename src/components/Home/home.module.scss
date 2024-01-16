@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.scss";
+
+.cats {
+	&__btn {
+		margin: 5px 0;
+		cursor: pointer;
+		transition: background-color 0.25s;
+		border: 1px solid transparent;
+		color: $color_blue;
+		font-size: 1.2rem;
+		border-radius: 5px;
+		padding: 0.3rem;
+		&:hover {
+			background-color: $color_blue;
+			color: $color_grey;
+		}
+	}
+	&__main {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+		gap: 10px;
+	}
+}

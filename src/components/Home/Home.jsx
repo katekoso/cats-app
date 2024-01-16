@@ -1,8 +1,7 @@
-import styles from "./home.module.scss";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import Card from "./Card/Card";
 import Main from "./Main";
+import Loader from "../Loader/Loader";
 
 const Home = () => {
 	const [showLiked, setShowLiked] = useState(false);
@@ -16,8 +15,6 @@ const Home = () => {
 
 	return (
 		<>
-			{loading && <div>Loading...</div>}
-			{error && <div>{error}</div>}
 			{showLiked ? (
 				<Main
 					onClick={handleClick}
@@ -31,6 +28,12 @@ const Home = () => {
 					buttonMessage="Вам понравилось"
 				/>
 			)}
+			{loading && (
+				<div>
+					<Loader />
+				</div>
+			)}
+			{error && <div>{error}</div>}
 		</>
 	);
 };
